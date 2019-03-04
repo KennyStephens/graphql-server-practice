@@ -7,9 +7,19 @@ type User {
 
 type Post {
   id: ID! @unique
+  createdAt: DateTime!
+  updatedAt: DateTime!
   title: String!
   published: Boolean! @default(value: "false")
   author: User
+  comments: 
 }
 
-type 
+type Comment {
+  id: ID! @unique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  bodyText: String!
+  createdBy: User
+}
+
