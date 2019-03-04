@@ -12,7 +12,7 @@ type Post {
   title: String!
   published: Boolean! @default(value: "false")
   author: User
-  comments: 
+  comments: [Comment!]!
 }
 
 type Comment {
