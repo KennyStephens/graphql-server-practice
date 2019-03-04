@@ -11,3 +11,5 @@ type Post {
   published: Boolean! @default(value: "false")
   author: User
 }
+
+type 

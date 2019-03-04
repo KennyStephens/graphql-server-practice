@@ -6,7 +6,7 @@ async function main() {
   // Create a new user with a new post
   const newUser = await prisma
     .createUser({
-      name: "Bob",
+      name: "Janet",
       email: "bob@prisma.io",
       posts: {
         create: [{
