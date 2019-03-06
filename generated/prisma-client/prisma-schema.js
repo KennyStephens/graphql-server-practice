@@ -36,6 +36,7 @@ type OverwatchCharacters {
   id: ID!
   name: String!
   hometown: String
+  catchPhrase: String
 }
 
 type OverwatchCharactersConnection {
@@ -47,6 +48,7 @@ type OverwatchCharactersConnection {
 input OverwatchCharactersCreateInput {
   name: String!
   hometown: String
+  catchPhrase: String
 }
 
 type OverwatchCharactersEdge {
@@ -61,6 +63,8 @@ enum OverwatchCharactersOrderByInput {
   name_DESC
   hometown_ASC
   hometown_DESC
+  catchPhrase_ASC
+  catchPhrase_DESC
   createdAt_ASC
   createdAt_DESC
   updatedAt_ASC
@@ -71,6 +75,7 @@ type OverwatchCharactersPreviousValues {
   id: ID!
   name: String!
   hometown: String
+  catchPhrase: String
 }
 
 type OverwatchCharactersSubscriptionPayload {
@@ -94,11 +99,13 @@ input OverwatchCharactersSubscriptionWhereInput {
 input OverwatchCharactersUpdateInput {
   name: String
   hometown: String
+  catchPhrase: String
 }
 
 input OverwatchCharactersUpdateManyMutationInput {
   name: String
   hometown: String
+  catchPhrase: String
 }
 
 input OverwatchCharactersWhereInput {
@@ -144,6 +151,20 @@ input OverwatchCharactersWhereInput {
   hometown_not_starts_with: String
   hometown_ends_with: String
   hometown_not_ends_with: String
+  catchPhrase: String
+  catchPhrase_not: String
+  catchPhrase_in: [String!]
+  catchPhrase_not_in: [String!]
+  catchPhrase_lt: String
+  catchPhrase_lte: String
+  catchPhrase_gt: String
+  catchPhrase_gte: String
+  catchPhrase_contains: String
+  catchPhrase_not_contains: String
+  catchPhrase_starts_with: String
+  catchPhrase_not_starts_with: String
+  catchPhrase_ends_with: String
+  catchPhrase_not_ends_with: String
   AND: [OverwatchCharactersWhereInput!]
   OR: [OverwatchCharactersWhereInput!]
   NOT: [OverwatchCharactersWhereInput!]

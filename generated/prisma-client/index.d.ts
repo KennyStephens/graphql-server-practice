@@ -126,6 +126,8 @@ export type OverwatchCharactersOrderByInput =
   | "name_DESC"
   | "hometown_ASC"
   | "hometown_DESC"
+  | "catchPhrase_ASC"
+  | "catchPhrase_DESC"
   | "createdAt_ASC"
   | "createdAt_DESC"
   | "updatedAt_ASC"
@@ -136,16 +138,19 @@ export type MutationType = "CREATED" | "UPDATED" | "DELETED";
 export interface OverwatchCharactersCreateInput {
   name: String;
   hometown?: String;
+  catchPhrase?: String;
 }
 
 export interface OverwatchCharactersUpdateInput {
   name?: String;
   hometown?: String;
+  catchPhrase?: String;
 }
 
 export interface OverwatchCharactersUpdateManyMutationInput {
   name?: String;
   hometown?: String;
+  catchPhrase?: String;
 }
 
 export interface OverwatchCharactersWhereInput {
@@ -191,6 +196,20 @@ export interface OverwatchCharactersWhereInput {
   hometown_not_starts_with?: String;
   hometown_ends_with?: String;
   hometown_not_ends_with?: String;
+  catchPhrase?: String;
+  catchPhrase_not?: String;
+  catchPhrase_in?: String[] | String;
+  catchPhrase_not_in?: String[] | String;
+  catchPhrase_lt?: String;
+  catchPhrase_lte?: String;
+  catchPhrase_gt?: String;
+  catchPhrase_gte?: String;
+  catchPhrase_contains?: String;
+  catchPhrase_not_contains?: String;
+  catchPhrase_starts_with?: String;
+  catchPhrase_not_starts_with?: String;
+  catchPhrase_ends_with?: String;
+  catchPhrase_not_ends_with?: String;
   AND?: OverwatchCharactersWhereInput[] | OverwatchCharactersWhereInput;
   OR?: OverwatchCharactersWhereInput[] | OverwatchCharactersWhereInput;
   NOT?: OverwatchCharactersWhereInput[] | OverwatchCharactersWhereInput;
@@ -257,6 +276,7 @@ export interface OverwatchCharactersPreviousValues {
   id: ID_Output;
   name: String;
   hometown?: String;
+  catchPhrase?: String;
 }
 
 export interface OverwatchCharactersPreviousValuesPromise
@@ -265,6 +285,7 @@ export interface OverwatchCharactersPreviousValuesPromise
   id: () => Promise<ID_Output>;
   name: () => Promise<String>;
   hometown: () => Promise<String>;
+  catchPhrase: () => Promise<String>;
 }
 
 export interface OverwatchCharactersPreviousValuesSubscription
@@ -273,6 +294,7 @@ export interface OverwatchCharactersPreviousValuesSubscription
   id: () => Promise<AsyncIterator<ID_Output>>;
   name: () => Promise<AsyncIterator<String>>;
   hometown: () => Promise<AsyncIterator<String>>;
+  catchPhrase: () => Promise<AsyncIterator<String>>;
 }
 
 export interface OverwatchCharactersEdge {
@@ -323,6 +345,7 @@ export interface OverwatchCharacters {
   id: ID_Output;
   name: String;
   hometown?: String;
+  catchPhrase?: String;
 }
 
 export interface OverwatchCharactersPromise
@@ -331,6 +354,7 @@ export interface OverwatchCharactersPromise
   id: () => Promise<ID_Output>;
   name: () => Promise<String>;
   hometown: () => Promise<String>;
+  catchPhrase: () => Promise<String>;
 }
 
 export interface OverwatchCharactersSubscription
@@ -339,6 +363,7 @@ export interface OverwatchCharactersSubscription
   id: () => Promise<AsyncIterator<ID_Output>>;
   name: () => Promise<AsyncIterator<String>>;
   hometown: () => Promise<AsyncIterator<String>>;
+  catchPhrase: () => Promise<AsyncIterator<String>>;
 }
 
 export interface OverwatchCharactersConnection {
