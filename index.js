@@ -12,6 +12,7 @@ async function main() {
   const postOverwatchCharacter = await prisma
     .character({ name: "Zenyatta" })
     console.log(postOverwatchCharacter);
+
 }
 
 main().catch(e => console.error(e))
